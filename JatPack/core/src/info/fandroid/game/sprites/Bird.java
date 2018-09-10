@@ -33,7 +33,6 @@ public class Bird {
         position.add(0,velosity.y,0);
 
 
-
         velosity.scl(1/dt);
 
     }
