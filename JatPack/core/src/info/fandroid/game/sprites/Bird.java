@@ -4,7 +4,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector3;
 
 public class Bird {
-    public static final int GRAVITY = -16;
+    private static final  int MoVEMENT = 100;
+    private static final int GRAVITY = -16;
     private Vector3 position;
     private Vector3 velosity;
 
@@ -30,7 +31,7 @@ public class Bird {
             velosity.add(0,GRAVITY,0);
         }
         velosity.scl(dt);
-        position.add(0,velosity.y,0);
+        position.add(MoVEMENT * dt,velosity.y,0);
 
         if(position.y <0)
         {
