@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector3;
 
 public class Bird {
-    public static final int GRAVITY = -17;
+    public static final int GRAVITY = -16;
     private Vector3 position;
     private Vector3 velosity;
 
