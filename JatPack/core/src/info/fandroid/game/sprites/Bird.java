@@ -14,7 +14,7 @@ public class Bird {
     {
         position = new Vector3(x,y,0);
         velosity = new Vector3(0,0,0);
-        bird = new Texture("bird.jpg");
+        bird = new Texture("bird.png");
     }
 
     public Vector3 getPosition() {
