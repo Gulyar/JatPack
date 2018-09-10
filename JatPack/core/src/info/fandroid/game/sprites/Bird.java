@@ -14,7 +14,7 @@ public class Bird {
     {
         position = new Vector3(x,y,0);
         velosity = new Vector3(0,0,0);
-        bird = new Texture("bird.jpg");
+        bird = new Texture("bird.png");
     }
 
     public Vector3 getPosition() {
@@ -26,17 +26,13 @@ public class Bird {
     }
 
     public void update(float dt){
-        if(position.y > 0)
-        {
-            velosity.add(0,GRAVITY,0);
-        }
+
+
+        velosity.add(0,GRAVITY,0);
         velosity.scl(dt);
         position.add(0,velosity.y,0);
 
-        if(position.y < 0)
-        {
-            position.y = 0;
-        }
+
 
         velosity.scl(1/dt);
 
