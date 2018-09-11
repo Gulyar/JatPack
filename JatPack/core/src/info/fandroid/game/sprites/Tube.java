@@ -62,5 +62,12 @@ public class Tube {
      {
          posTopTube.set(x, rand.nextInt(FLUCTUATION) + TUBE_GAP + LOWEST_OPENING);
          posBotTube.set(x, posTopTube.y - TUBE_GAP - truba1.getHeight());
+         boundsTop.setPosition(posTopTube.x,posTopTube.y);
+         boundsBot.setPosition(posBotTube.x, posBotTube.y);
+     }
+
+     public boolean collides (Rectangle player)
+     {
+         return player.overlaps(boundsTop) || player.overlaps(boundsBot);
      }
 }
