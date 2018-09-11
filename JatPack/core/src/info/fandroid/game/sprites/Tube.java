@@ -1,6 +1,7 @@
 package info.fandroid.game.sprites;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 import java.util.Random;
@@ -15,7 +16,7 @@ public class Tube {
     private Texture truba, truba1;
     private Vector2 posTopTube, posBotTube;
     private Random rand;
-
+    private Rectangle boundsTop, boundsBot;
 
 
 
@@ -51,7 +52,8 @@ public class Tube {
         posTopTube = new Vector2(x, rand.nextInt(FLUCTUATION) + TUBE_GAP + LOWEST_OPENING);
         posBotTube = new Vector2(x, posTopTube.y - TUBE_GAP - truba1.getHeight());
 
-
+        boundsTop = new Rectangle(posTopTube.x,posTopTube.y,truba.getWidth(), truba.getHeight());
+        boundsBot = new Rectangle(posBotTube.x,posBotTube.y,truba1.getWidth(), truba1.getHeight());
 
 
     }
