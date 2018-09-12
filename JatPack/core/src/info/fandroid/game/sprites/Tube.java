@@ -10,7 +10,7 @@ public class Tube {
 
     public static final int TUBE_WIDTH = 52;
     public static final int FLUCTUATION = 130;
-    public static final int TUBE_GAP = 100;
+    public static final int TUBE_GAP = 300;
     public static final int LOWEST_OPENING = 120;
 
     private Texture truba, truba1;
@@ -52,7 +52,7 @@ public class Tube {
         posTopTube = new Vector2(x, rand.nextInt(FLUCTUATION) + TUBE_GAP + LOWEST_OPENING);
         posBotTube = new Vector2(x, posTopTube.y - TUBE_GAP - truba1.getHeight());
 
-        boundsTop = new Rectangle(posTopTube.x,posTopTube.y,truba.getWidth(), truba.getHeight());
+      boundsTop = new Rectangle(posTopTube.x,posTopTube.y,truba.getWidth(), truba.getHeight());
         boundsBot = new Rectangle(posBotTube.x,posBotTube.y,truba1.getWidth(), truba1.getHeight());
 
 
