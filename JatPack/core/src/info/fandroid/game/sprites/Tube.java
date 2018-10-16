@@ -70,4 +70,11 @@ public class Tube {
      {
          return player.overlaps(boundsTop) || player.overlaps(boundsBot);
      }
+
+     public void dispose()
+     {
+         truba.dispose();
+         truba1.dispose();
+     }
+
 }

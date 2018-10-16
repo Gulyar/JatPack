@@ -53,4 +53,9 @@ private Rectangle bounds;
     {
         return  bounds;
     }
+
+    public void dispose()
+    {
+        bird.dispose();
+    }
 }
