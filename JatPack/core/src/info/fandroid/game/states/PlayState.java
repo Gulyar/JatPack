@@ -31,9 +31,11 @@ public class PlayState extends State {
 
         for(int i=0; i< TUBE_COUNT;i++)
         {
+
             tubes.add(new Tube(i*(TUBE_SPACING + Tube.TUBE_WIDTH)));
         }
 
+        System.out.println("ddd");
     }
 
     @Override
@@ -46,7 +48,7 @@ public class PlayState extends State {
     public void update(float dt) {
         handleinput();
         bird.update(dt);
-        camera.position.x =bird.getPosition().x+80;
+        camera.position.x =bird.getPosition().x;
 
         for (Tube tube: tubes) {
             if(camera.position.x - (camera.viewportWidth /2) > tube.getPosTopTube().x+tube.getTruba().getWidth())
