@@ -10,8 +10,8 @@ import info.fandroid.game.states.GameStateManager;
 import info.fandroid.game.states.MenuState;
 
 public class JetPack extends ApplicationAdapter {
-	public static final int WIDTH=740;
-	public static final int HEIGHT=1400;
+	public static final int WIDTH=720;
+	public static final int HEIGHT=1300;
 	public static final String title = "JetPack";
 
 	private GameStateManager gsm;

@@ -36,11 +36,9 @@ public class PlayState extends State {
 
         for(int i=0; i< TUBE_COUNT;i++)
         {
-
             tubes.add(new Tube(i*(TUBE_SPACING + Tube.TUBE_WIDTH)));
         }
 
-        System.out.println("ddd");
     }
 
     @Override
@@ -54,7 +52,7 @@ public class PlayState extends State {
         handleinput();
         updateGround();
         bird.update(dt);
-        camera.position.x =bird.getPosition().x;
+        camera.position.x =bird.getPosition().x+80;
 
         for (int i =0; i< tubes.size; i++) {
             

@@ -9,12 +9,12 @@ import java.util.Random;
 public class Tube {
 
     public static final int TUBE_WIDTH = 52;
-    public static final int FLUCTUATION = 130;//130
-    public static final int TUBE_GAP = 150;
+    public static final int FLUCTUATION = 130;
+    public static final int TUBE_GAP = 300;
     public static final int LOWEST_OPENING = 120;
 
     private Texture truba, truba1;
-    private Vector2 posTopTube, posBotTube, vidstan;
+    private Vector2 posTopTube, posBotTube;
     private Random rand;
     private Rectangle boundsTop, boundsBot;
 
@@ -48,7 +48,7 @@ public class Tube {
         truba = new Texture("truba.png");
         truba1 = new Texture("truba1.png");
         rand = new Random();
-        vidstan = new Vector2(x+220,220);
+
         posTopTube = new Vector2(x, rand.nextInt(FLUCTUATION) + TUBE_GAP + LOWEST_OPENING);
         posBotTube = new Vector2(x, posTopTube.y - TUBE_GAP - truba1.getHeight());
 
