@@ -64,6 +64,7 @@ public class Tube {
          posBotTube.set(x, posTopTube.y - TUBE_GAP - truba1.getHeight());
          boundsTop.setPosition(posTopTube.x,posTopTube.y);
          boundsBot.setPosition(posBotTube.x, posBotTube.y);
+
      }
 
      public boolean collides (Rectangle player)
@@ -73,7 +74,7 @@ public class Tube {
 
      public void dispose()
      {
-         truba.dispose();
+       truba.dispose();
          truba1.dispose();
      }
 

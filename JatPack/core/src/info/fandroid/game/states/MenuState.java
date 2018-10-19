@@ -20,7 +20,7 @@ public class MenuState  extends State{
 
     public MenuState(GameStateManager gsm) {
         super(gsm);
-       // camera.setToOrtho(false, JetPack.WIDTH /2, JetPack.HEIGHT/2);
+     //   camera.setToOrtho(false, JetPack.WIDTH /2, JetPack.HEIGHT/2);//2
         background = new Texture("bk.png");
         playBtn = new Texture("button.png");
     }
@@ -33,10 +33,12 @@ public class MenuState  extends State{
 
     @Override
     public void render(SpriteBatch sb) {
-      //  sb.setProjectionMatrix(camera.combined);
+      //  sb.setProjectionMatrix(camera.combined);//2
     sb.begin();
-    sb.draw(background, 10,10);
-    sb.draw(playBtn, camera.position.x - playBtn.getWidth() /2 , camera.position.y);
+    sb.draw(background,0,0,JetPack.WIDTH, JetPack.HEIGHT);
+    sb.draw(background, 10,10);//2
+    sb.draw(playBtn, (JetPack.WIDTH /2 ) - (playBtn.getWidth() /2), JetPack.HEIGHT /2);
+    //sb.draw(playBtn, camera.position.x - playBtn.getWidth() /2 , camera.position.y);
     sb.end();
     }
 
@@ -44,6 +46,6 @@ public class MenuState  extends State{
     public void dispose() {
     background.dispose();
     playBtn.dispose();
-        System.out.println("MenuState Disposed");
+    System.out.println("MenuState Disposed");
     }
 }
